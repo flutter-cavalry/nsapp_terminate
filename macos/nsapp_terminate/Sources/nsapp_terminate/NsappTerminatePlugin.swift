@@ -3,7 +3,8 @@ import FlutterMacOS
 
 public class NsappTerminatePlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
-    let channel = FlutterMethodChannel(name: "nsapp_terminate", binaryMessenger: registrar.messenger)
+    let channel = FlutterMethodChannel(
+      name: "nsapp_terminate", binaryMessenger: registrar.messenger)
     let instance = NsappTerminatePlugin()
     registrar.addMethodCallDelegate(instance, channel: channel)
   }
